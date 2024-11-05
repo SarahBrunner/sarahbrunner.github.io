@@ -101,6 +101,13 @@
       .getUserMedia({ video: true })
       .then((localMediaStream) => {
         sky.appendChild(canvas);
+        {
+          video: {
+            facingMode: {
+              exact: 'environment'
+            }
+          }
+        }
 
         const video = document.querySelector("video");
         video.srcObject = localMediaStream;
