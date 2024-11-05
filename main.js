@@ -98,10 +98,7 @@
   window.addEventListener('resize', onResize, false);
 
   navigator.mediaDevices
-      .getUserMedia({ video: { 
-        facingMode: { exact: "enviroment" }
-      }
-      })
+      .getUserMedia({ video: true })
       .then((localMediaStream) => {
         sky.appendChild(canvas);
 
