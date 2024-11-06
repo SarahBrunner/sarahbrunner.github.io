@@ -97,19 +97,6 @@
     onResize();
   window.addEventListener('resize', onResize, false);
 
-  const videoElement = document.getElementById('video');
-  const adjustCameraSize = () => {
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    
-    // Set video element size to fill the screen
-    videoElement.width = screenWidth;
-    videoElement.height = screenHeight;
-  };
-  
-  window.addEventListener('resize', adjustCameraSize);
-  adjustCameraSize();  // Initialize on load
-
   navigator.mediaDevices
       .getUserMedia({ video: {
         facingMode: { exact: "environment" }
