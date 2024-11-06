@@ -131,17 +131,4 @@
   function pauseAudio() {
     x.pause();
   }
-  function enterFullScreen() {
-    const docEl = document.documentElement;
-
-    if (docEl.requestFullscreen) {
-      docEl.requestFullscreen();
-    } else if (docEl.mozRequestFullScreen) { // Firefox
-      docEl.mozRequestFullScreen();
-    } else if (docEl.webkitRequestFullscreen) { // Chrome, Safari, Opera
-      docEl.webkitRequestFullscreen();
-    } else if (docEl.msRequestFullscreen) { // IE/Edge
-      docEl.msRequestFullscreen();
-    }
-  }
 })()
