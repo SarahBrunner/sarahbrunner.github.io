@@ -118,10 +118,6 @@
         myElement.innerHTML = "Der Zugriff auf die Kamera wurde blockiert.<br></br> Bitte erlauben Sie den Zugriff, um die Funktionen dieser Webseite nutzen zu können."
       });
 
-  const para = document.createElement("p");
-  para.innerHTML = "Um die Funktionen dieser Webseite nutzen zu können, müssen Sie die Kamera aktivieren.<br></br> Bitte erlauben Sie den Zugriff auf Ihre Kamera.";
-  document.getElementById("container").appendChild(para);
-
   const x = document.getElementById("Audio");
 
   function playAudio() {
