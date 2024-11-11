@@ -108,7 +108,14 @@
       sky.appendChild(canvas);
 
       const video = document.querySelector("video");
-      video.srcObject = localMediaStream;
+
+      if ("srcObject" in video) {
+        video.srcObject = localMediaStream;
+      } else {
+        video.src = window.URL.createObjectURL(localMediaStream);
+      }
+
+      video.play();
 
       const element = document.getElementById("container");
       element.remove();
