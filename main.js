@@ -102,6 +102,7 @@
   navigator.mediaDevices
     .getUserMedia({
       video: true,
+      audio: false,
     })
     .then((localMediaStream) => {
       sky.appendChild(canvas);
