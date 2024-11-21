@@ -22,7 +22,7 @@ navigator.mediaDevices
   .catch(() => {
     const myElement = document.getElementById("container");
     myElement.innerHTML =
-      "Der Zugriff auf die Kamera wurde blockiert.<br/> Bitte erlauben Sie den Zugriff, um die Funktionen dieser Webseite nutzen zu können.";
+      "Der Zugriff auf die Kamera wurde blockiert.<br/> Bitte erlaube den Zugriff, um ins Schneegestöber eintauchen zu können.";
   });
 
 const playButton = document.getElementById("playButton");
