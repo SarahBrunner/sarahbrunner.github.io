@@ -30,12 +30,6 @@ body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/** Snow code **/
-body {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  filter: drop-shadow(0 0 10px white);
-}
-
 .snow {
   position: absolute;
   width: 10px;

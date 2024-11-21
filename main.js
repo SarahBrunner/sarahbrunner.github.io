@@ -18,11 +18,6 @@ navigator.mediaDevices
 
     const element = document.getElementById("container");
     element.remove();
-
-    // Load and play audio
-    loadAudio().then(() => {
-      playAudio();
-    });
   })
   .catch(() => {
     const myElement = document.getElementById("container");
