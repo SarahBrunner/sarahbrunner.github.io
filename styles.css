@@ -29,7 +29,16 @@ body {
   text-align: center;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
-
+#playButton {
+  background-color: #ffc400;
+  border-radius: 5px;
+  border: 1px solid black;
+  bottom: 0;
+  position: fixed;
+  padding: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .snow {
   position: absolute;
   width: 10px;
