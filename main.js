@@ -61,4 +61,5 @@ playButton.addEventListener("click", async () => {
     await loadAudio();
   }
   playAudio();
+  audioBuffer.loop = false;
 });
