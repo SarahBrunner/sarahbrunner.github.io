@@ -28,6 +28,8 @@ navigator.mediaDevices
 const playButton = document.getElementById("playButton");
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 let audioBuffer;
+let sourceNode = null;
+let isPlaying = false;
 
 // Load MP3 file
 async function loadAudio() {
@@ -43,10 +45,24 @@ function playAudio() {
     return;
   }
 
-  const source = audioContext.createBufferSource();
-  source.buffer = audioBuffer;
-  source.connect(audioContext.destination);
-  source.start(0);
+  if (sourceNode) {
+    sourceNode.stop();
+    sourceNode.disconnect();
+  }
+
+  sourceNode = audioContext.createBufferSource();
+  sourceNode.buffer = audioBuffer;
+  sourceNode.connect(audioContext.destination);
+  sourceNode.start(0);
+  isPlaying = true;
+}
+
+function pauseAudio() {
+  if (sourceNode) {
+    sourceNode.stop();
+    sourceNode.disconnect();
+    isPlaying = false;
+  }
 }
 
 // Event listener
@@ -61,5 +77,4 @@ playButton.addEventListener("click", async () => {
     await loadAudio();
   }
   playAudio();
-  playAudio.loop = false;
 });
