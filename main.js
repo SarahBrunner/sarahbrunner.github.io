@@ -13,8 +13,8 @@ navigator.mediaDevices
     } else {
       video.src = window.URL.createObjectURL(localMediaStream);
     }
-
-    video.play();
+    
+    video.play(); 
 
     const element = document.getElementById("container");
     element.remove();
@@ -61,15 +61,4 @@ playButton.addEventListener("click", async () => {
     await loadAudio();
   }
   playAudio();
-});
-
-playButton.addEventListener("click", () => {
-  // Check if the audio is currently playing
-  if (audioPlayer.paused) {
-      // If paused, play the audio
-      playAudio();
-  } else {
-      // If playing, pause the audio
-      pauseAudio();
-  }
 });
