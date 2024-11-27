@@ -6,8 +6,11 @@ body {
 }
 body {
   margin: 0;
+  position: fixed;
 }
-
+* {
+  box-sizing: border-box;
+}
 .video {
   position: absolute;
   top: 0;
