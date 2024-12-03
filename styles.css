@@ -1,3 +1,7 @@
+:root {
+  font-family: 'Univers LT Std', sans-serif;
+}
+
 html,
 body {
   height: 100%;
@@ -32,7 +36,6 @@ body {
   align-items: center;
   height: 100vh;
   text-align: center;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 #playButton {
   background-color: #ffc400;
@@ -40,9 +43,13 @@ body {
   border: 1px solid black;
   bottom: 5px;
   position: fixed;
-  padding: 3px;
+  padding: 7px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: 'Univers LT Std', sans-serif;
+}
+#playButton:hover {
+  cursor: pointer;
 }
 .snow {
   position: absolute;
