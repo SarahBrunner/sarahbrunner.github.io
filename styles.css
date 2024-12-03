@@ -43,7 +43,8 @@ body {
   border: 1px solid black;
   bottom: 5px;
   position: fixed;
-  padding: 7px;
+  padding: 8px;
+  padding-bottom: 4px;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Univers LT Std', sans-serif;
